@@ -111,6 +111,6 @@ To run the JUnit 5 test suite via Gradle inside a container:
 ---
 
 ## 👤 Author
-- **Intern Name:** CodeAlpha Intern
+- **Intern Name:** Abdulrahman Reda Lailah
 - **Internship Program:** CodeAlpha DevOps Internship
 - **Task:** Task 3 - Java Application using Gradle
