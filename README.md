@@ -101,15 +101,6 @@ To run the JUnit 5 test suite via Gradle inside a container:
 
 ---
 
-## 📹 LinkedIn Video Demonstration Outline
-1. **Introduction**: Present yourself and the project goal for **Task 3: Java Application using Gradle** under **@CodeAlpha**.
-2. **Gradle & Code**: Show `build.gradle` and the JUnit 5 test cases in `MessageServiceTest.java`.
-3. **CI/CD Pipeline**: Show the `.github/workflows/ci-cd.yml` file and demonstrate how GitHub Actions builds, tests, and packages automatically.
-4. **Execution & Live Demo**: Run `.\manage.ps1 start` and open `http://localhost:8081` in the browser, showing `/api/health` and `/api/greet`.
-5. **Conclusion**: Highlight multi-stage Docker build benefits and CI/CD quality gates.
-
----
-
 ## 👤 Author
 - **Intern Name:** Abdulrahman Reda Lailah
 - **Internship Program:** CodeAlpha DevOps Internship
