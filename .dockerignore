@@ -1,0 +1,8 @@
+.git
+.gitignore
+*.md
+.gradle
+build
+manage.ps1
+manage.sh
+.github

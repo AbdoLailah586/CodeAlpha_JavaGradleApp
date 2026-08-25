@@ -1,0 +1,61 @@
+/*
+ * CodeAlpha DevOps Internship - Task 3
+ * Java Application Build Automation using Gradle
+ */
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+}
+
+group = 'com.codealpha'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JUnit 5 Testing Framework
+    testImplementation platform('org.junit:junit-bom:5.10.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+application {
+    mainClass = 'com.codealpha.app.App'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'com.codealpha.app.App',
+            'Implementation-Title': project.name,
+            'Implementation-Version': project.version
+        )
+    }
+    archiveBaseName = 'codealpha-java-app'
+}
